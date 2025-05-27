@@ -27,6 +27,7 @@ import cafe.adriel.voyager.navigator.currentOrThrow
 import cafe.adriel.voyager.transitions.FadeTransition
 import cafe.adriel.voyager.transitions.ScaleTransition
 import cafe.adriel.voyager.transitions.SlideTransition
+import com.isai_arellano.navigationkmp.navigationkmp.botton_bar.BottomBarScreen
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -49,13 +50,16 @@ class MainScreen: Screen {
     @Composable
     override fun Content(){
         val navigator = LocalNavigator.currentOrThrow
-        var showContent by remember { mutableStateOf(false) }
         Column(
             Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Button(onClick = {navigator.push(SecondScreen())}) {
                 Text("Basic navigation")
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(onClick = {navigator.push(BottomBarScreen())}) {
+                Text("Bottonbar navigation")
             }
 
         }
