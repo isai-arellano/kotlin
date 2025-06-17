@@ -51,6 +51,7 @@ kotlin {
             implementation(libs.voyager.transitions)
             implementation(libs.voyager.tabNavigator)
             implementation(compose.materialIconsExtended)
+            implementation(libs.settings)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

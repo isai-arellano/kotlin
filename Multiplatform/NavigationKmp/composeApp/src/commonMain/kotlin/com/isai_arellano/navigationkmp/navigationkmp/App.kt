@@ -28,6 +28,7 @@ import cafe.adriel.voyager.transitions.FadeTransition
 import cafe.adriel.voyager.transitions.ScaleTransition
 import cafe.adriel.voyager.transitions.SlideTransition
 import com.isai_arellano.navigationkmp.navigationkmp.botton_bar.BottomBarScreen
+import com.isai_arellano.navigationkmp.navigationkmp.settings.ProfileScreen
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -61,7 +62,10 @@ class MainScreen: Screen {
             Button(onClick = {navigator.push(BottomBarScreen())}) {
                 Text("Bottonbar navigation")
             }
-
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(onClick = {navigator.push(ProfileScreen())}) {
+                Text("Navegación con persistencia de datos")
+            }
         }
     }
 }
